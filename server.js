@@ -21,29 +21,12 @@ app.use(cors());
 // request body to deserialized request.body property
 app.use(express.json());
 
-// connect to the database
-const client = require('./db-client');
-
 // server files in public directory
 app.use(express.static('public'));
 
-/* TEMP DATABASE SOLUTION */
+// connect to the database
+const client = require('./db-client');
 
-// temp solution to updating data...
-const fs = require('fs');
-// fs file paths are relative to pwd (cwd) aka where you started node
-// path to data file:
-const dataPath = 'data/tweets.json';
-
-function readData() {
-  // convenient method for reading file.
-  // DON'T ever use in production
-  const raw = fs.readFileSync(dataPath);
-  // make into js array with house objects
-  const data = JSON.parse(raw);
-
-  return data;
-}
 
 /* ROUTES */
 
@@ -207,7 +190,7 @@ app.get('/api/issues/:id', (req, res) => {
 /* RUN THE SERVER */
 
 // set the PORT on which to listen
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 // start "listening" (run) the app (server)
-app.listen(PORT, () => console.log('app running...'));
+app.listen(PORT, () => console.log('app running on 3000...'));
