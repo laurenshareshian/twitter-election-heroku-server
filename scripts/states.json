@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Arizona", 
+        "pol1": "Republican Rep. Martha McSally", 
+        "pol2": "Democratic Rep. Kyrsten Sinema", 
+        "twitter1": "RepMcSally", 
+        "twitter2": "RepSinema" 
+    },
+    {
+        "name": "California", 
+        "pol1": "Democratic incumbent Dianne Feinstein", 
+        "pol2": "Democratic challenger State Sen. Kevin de Leon", 
+        "twitter1": "SenFeinstein", 
+        "twitter2": "kdeleon" 
+    },
+    {
+        "name": "Florida", 
+        "pol1": "Democratic incumbent Sen. Bill Nelson", 
+        "pol2": "Republican Gov. Rick Scott", 
+        "twitter1": "SenBillNelson", 
+        "twitter2": "FLGovScott" 
+    },
+    {
+        "name": "Indiana", 
+        "pol1": "Democratic incumbent Sen. Joe Donnelly", 
+        "pol2": "Republican Mike Braun", 
+        "twitter1": "SenDonnelly", 
+        "twitter2": "braun4indiana" 
+    },
+    {
+        "name": "Minnesota", 
+        "pol1": "Incumbent Democrat Tina Smith", 
+        "pol2": "Sen. Karin Housley", 
+        "twitter1": "SenTinaSmith", 
+        "twitter2": "KarinHousley" 
+    },
+    {
+        "name": "Missouri", 
+        "pol1": "Incumbent Democrat Claire McCaskill",
+        "pol2": "Republican State Attorney General Josh Hawley", 
+        "twitter1": "McCaskillOffice", 
+        "twitter2": "HawleyMO" 
+    },
+    {
+        "name": "Montana", 
+        "pol1": "Incumbent Democrat Jon Tester", 
+        "pol2": "Republican Matthew Rosendale", 
+        "twitter1": "SenatorTester", 
+        "twitter2": "MattRosendale" 
+    },
+    {
+        "name": "Nevada", 
+        "pol1": "Incumbent Republican Dean Heller", 
+        "pol2": "Democrat U.S. Rep. Jacky Rosen", 
+        "twitter1": "SenDeanHeller", 
+        "twitter2": "RepJackyRosen" 
+    },
+    {
+        "name": "North Dakota", 
+        "pol1": "Incumbent Democrat Heidi Heitkamp", 
+        "pol2": "Republican U.S. Rep. Kevin Cramer", 
+        "twitter1": "SenatorHeitkamp", 
+        "twitter2": "RepKevinCramer" 
+    },
+    {
+        "name": "Ohio", 
+        "pol1": "Incumbent Democrat Sherrod Brown", 
+        "pol2": "Republican U.S. Rep. Jim Renacci", 
+        "twitter1": "SenSherrodBrown", 
+        "twitter2": "RepJimRenacci" 
+    },
+    {
+        "name": "Tennessee", 
+        "pol1": "Republican Rep. Marsha Blackburn", 
+        "pol2": "Democrat Phil Bredesen", 
+        "twitter1": "MarshaBlackburn", 
+        "twitter2": "PhilBredesen" 
+    },
+    {
+        "name": "Texas", 
+        "pol1": "Incumbent Ted Cruz", 
+        "pol2": "Democratic U.S. Rep. Beto O’Rourke", 
+        "twitter1": "tedcruz", 
+        "twitter2": "RepBetoORourke" 
+    },
+    {
+        "name": "Utah", 
+        "pol1": "Republican Mitt Romney", 
+        "pol2": "Democrat Jenny Wilson", 
+        "twitter1": "MittRomney ‏", 
+        "twitter2": "JennyWilsonUT" 
+    },
+    {
+        "name": "Virgina", 
+        "pol1": "Incumbent Democrat Tim Kaine", 
+        "pol2": "Republican Corey Stewart", 
+        "twitter1": "timkaine", 
+        "twitter2": "CoreyStewartVA" 
+    },
+    {
+        "name": "West Virgina", 
+        "pol1": "Incumbent Democrat Joe Manchin", 
+        "pol2": "Republican State Attorney General Patrick Morrisey", 
+        "twitter1": "Sen_JoeManchin", 
+        "twitter2": "MorriseyWV" 
+    },
+    {
+        "name": "Wisconsin", 
+        "pol1": "Incumbent Democrat Tammy Baldwin", 
+        "pol2": "Republican Leah Vukmir", 
+        "twitter1": "tammybaldwin", 
+        "twitter2": "LeahVukmir" 
+    }
+  ]

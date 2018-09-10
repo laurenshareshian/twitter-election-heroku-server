@@ -1,0 +1,116 @@
+Arizona:
+Republican Rep. Martha McSally vs. Democratic Rep. Kyrsten Sinema
+@RepMcSally
+@RepSinema
+
+California:
+Democratic incumbent Dianne Feinstein vs. Democratic challenger State Sen. Kevin de León
+@SenFeinstein
+@kdeleon
+
+Florida:
+Democratic incumbent Sen. Bill Nelson vs. Republican Gov. Rick Scott
+@SenBillNelson
+@FLGovScott
+
+Indiana:
+Democratic incumbent Sen. Joe Donnelly vs. Republican Mike Braun
+@SenDonnelly
+@braun4indiana
+
+
+Minnesota:
+Incumbent Democrat Tina Smith vs. state Sen. Karin Housley
+@SenTinaSmith
+@KarinHousley
+
+Missouri: 
+Incumbent Democrat Claire McCaskill vs. Republican State Attorney General Josh Hawley
+@McCaskillOffice
+@HawleyMO
+
+Montana:
+Incumbent Democrat Jon Tester vs. Republican Matthew Rosendale
+@SenatorTester
+@MattRosendale
+
+Nevada:
+Incumbent Republican Dean Heller vs. Democrat U.S. Rep. Jacky Rosen
+@SenDeanHeller
+@RepJackyRosen
+
+North Dakota:
+Incumbent Democrat Heidi Heitkamp vs. Republican U.S. Rep. Kevin Cramer
+@SenatorHeitkamp
+@RepKevinCramer
+
+Ohio:
+ Incumbent Democrat Sherrod Brown vs. Republican U.S. Rep. Jim Renacci
+@SenSherrodBrown
+@RepJimRenacci
+
+ Tennessee:
+ Republican Rep. Marsha Blackburn vs. Democrat Phil Bredesen
+@MarshaBlackburn
+@PhilBredesen
+
+ Texas:
+ Incumbent Ted Cruz vs. Democratic U.S. Rep. Beto O’Rourke
+@tedcruz
+@RepBetoORourke
+
+ Utah:
+ Republican Mitt Romney vs. Democrat Jenny Wilson
+@MittRomney ‏
+@JennyWilsonUT
+
+ Virginia: 
+ Incumbent Democrat Tim Kaine vs. Republican Corey Stewart
+@timkaine
+@CoreyStewartVA
+
+West Virginia:
+Incumbent Democrat Joe Manchin vs. Republican State Attorney General Patrick Morrisey
+@Sen_JoeManchin
+@MorriseyWV
+
+Wisconsin:
+Incumbent Democrat Tammy Baldwin vs. Republican Leah Vukmir
+@tammybaldwin
+@LeahVukmir
+
+
+app.post('/api/tweets', (req, res) => {
+  const body = req.body;
+  let screen_name = body.screenName;
+  console.log(body);
+  var params = { screen_name: screen_name, count: 200 };
+  var data = [];
+  var max_id = 0;
+  var old_max_id = 0;
+  twitter.get('statuses/user_timeline', params, function(error, tweets, response) {
+    [max_id, old_max_id, data, params] = handleTweets(error, max_id, tweets, data, screen_name);
+    if(old_max_id !== max_id) {
+      twitter.get('statuses/user_timeline', params, function(error, tweets, response) {
+        [max_id, old_max_id, data, params] = handleTweets(error, max_id, tweets, data, screen_name);
+        if(old_max_id !== max_id){
+          twitter.get('statuses/user_timeline', params, function(error, tweets, response) {
+            [max_id, old_max_id, data, params] = handleTweets(error, max_id, tweets, data, screen_name);
+            if(old_max_id !== max_id){
+              twitter.get('statuses/user_timeline', params, function(error, tweets, response) {
+                [max_id, old_max_id, data, params] = handleTweets(error, max_id, tweets, data, screen_name);
+                if(old_max_id !== max_id){
+                  twitter.get('statuses/user_timeline', params, function(error, tweets, response) {
+                    [max_id, old_max_id, data, params] = handleTweets(error, max_id, tweets, data, screen_name);
+                    fs.writeFileSync(dataPath, JSON.stringify(data));
+                    res.send(data);
+                  });
+                }
+              });
+            }
+          });
+        }
+      });
+    }
+  });
+});
