@@ -2,8 +2,14 @@ require('dotenv').config();
 const client = require('../db-client');
 
 client.query(`
-    CREATE TABLE IF NOT EXISTS issues (
+    CREATE TABLE IF NOT EXISTS users (
       id SERIAL PRIMARY KEY,
+      email VARCHAR(256) NOT NULL,
+      password VARCHAR(256) NOT NULL
+    );
+    CREATE TABLE IF NOT EXISTS userissues (
+      id SERIAL PRIMARY KEY,
+      user_id INTEGER NOT NULL,
       name VARCHAR(256) NOT NULL,
       searchterms VARCHAR(256) ARRAY[10]
     );

@@ -3,7 +3,8 @@ const client = require('../db-client');
 
 client.query(`
     DROP TABLE IF EXISTS states;
-    DROP TABLE IF EXISTS issues;
+    DROP TABLE IF EXISTS users;
+    DROP TABLE IF EXISTS userissues;
 `)
   .then(
     () => console.log('drop tables complete'),

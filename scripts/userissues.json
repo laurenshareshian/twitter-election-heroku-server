@@ -1,0 +1,47 @@
+[
+    {
+        "user_id": 0,
+        "name": "Gun Control", 
+        "searchterms": ["gun", "guns", "nra", "shooting"] 
+    },
+    {
+        "user_id": 0,
+        "name": "Environment", 
+        "searchterms": ["climate", "pollution", "water", "warming", "environment"] 
+    },
+    {
+        "user_id": 0,
+        "name": "Women's Health", 
+        "searchterms": ["abortion", "abortions", "reproductive", "parenthood"] 
+    },
+    {
+        "user_id": 0,
+        "name": "Economy", 
+        "searchterms": ["economy", "trade", "manufacturing"] 
+    },
+    {
+        "user_id": 0,
+        "name": "Defense", 
+        "searchterms": ["defense", "army", "troops", "navy"] 
+    },
+    {
+        "user_id": 1,
+        "name": "Korea", 
+        "searchterms": ["kim", "dmz", "korea"] 
+    },
+    {
+        "user_id": 1,
+        "name": "Obama", 
+        "searchterms": ["obama", "barack"]
+    },
+    {
+        "user_id": 2,
+        "name": "Korea", 
+        "searchterms": ["kim", "dmz", "korea"] 
+    },
+    {
+        "user_id": 2,
+        "name": "Trump", 
+        "searchterms": ["mueller", "dossier", "impeachment", "trump"] 
+    }
+]
