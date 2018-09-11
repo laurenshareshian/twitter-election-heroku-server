@@ -141,7 +141,7 @@ app.post('/api/tweets', (req, res) => {
   var max_id = 0;
   var old_max_id = 0;
 
-  function fetchTweets(callsToMake = 3, params = {}, allTweets = []) { 
+  function fetchTweets(callsToMake = 5, params = {}, allTweets = []) { 
     return new Promise(() => {
       twitter.get('statuses/user_timeline', params, function(error, tweets, response) {
         [max_id, old_max_id, data, params] = handleTweets(error, max_id, tweets, data, screen_name);
@@ -157,7 +157,7 @@ app.post('/api/tweets', (req, res) => {
     });
   }
 
-  fetchTweets(2, params);
+  fetchTweets(5, params);
 
 });
 
